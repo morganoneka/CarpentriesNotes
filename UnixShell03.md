@@ -61,3 +61,10 @@ We can use `rm` safely though. Let's create a file: `touch temp.txt`. If we do `
 IF we try `rm thesis` we see that doesn't work. Instead, `rm -r thesis`. Super dangerous—use `rm -r -i thesis`.
 
 # Wildcards.
+Sometimes we want to do things on a large number of files. How might we go about that?
+
+Type `ls data-shell/molecules`. We have a lot of different files in here. 
+
+The `*` means "zero or more characters of any kind". `ls *.pdb` matches any file that ends in `.pdb`. 
+
+The `?` is also a wildcard. It matches exactly one character. So `?ethane.pdb` matches only `methane.pdb`, but `*ethane.pdb` matches both `ethane.pdb` and `methane.pdb`.
