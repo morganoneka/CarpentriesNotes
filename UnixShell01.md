@@ -1,3 +1,6 @@
+# SETUP
+Go to: http://swcarpentry.github.io/shell-novice/setup.html (paste this in the etherpad)
+
 # Justification
 You're likely familiar with using Finder, Windows Explorer, etc. You can do a lot of powerful things like creating, deleting, moving, opening & editing files.
 
