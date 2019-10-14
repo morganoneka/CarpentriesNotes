@@ -40,3 +40,5 @@ The shell starts by expanding *.dat to create the list of files it will process.
 
 ( show file: HowLoopsWork.png )
 
+# Activities 2
+https://github.com/morganoneka/CarpentriesNotes/blob/master/UnixShell/05_Loops/Activities.md
