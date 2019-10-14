@@ -56,3 +56,5 @@ Nelle doesn't want to lose these files, but she can't use them in certain analys
 
 Going forward, we can use `*[AB].txt` to only get files with A or B at the end. 
 
+# Activities Part 2
+https://github.com/morganoneka/CarpentriesNotes/blob/master/UnixShell/04_PipesAndFilters/Activities.md
