@@ -52,10 +52,41 @@ We also could copy an entire folder. `cp -r thesis thesis_backup`.
 
 (explain what recursive means here?)
 
-# Removing
-`rm science_paper.txt`. If we use `ls` we can see that the file is gone. Be careful, though. REmoving is FOREVER! There is no trash bin to un-delete files from.
+# Activities
+## Renaming files
+Suppose you created a file called `statstics.txt`. It was only after creating and saving this file that you realize you misspelled the file name! Which of these commands could you use to fix the mistake? Do you know what the other commands would do?
 
-We can use `rm` safely though. Let's create a file: `touch temp.txt`. If we do `rm -i temp.txt`, we are prompted before it gets eleted.
+1. cp statstics.txt statistics.txt
+1. mv statstics.txt statistics.txt
+1. mv statstics.txt .
+1. cp statstics.txt .
+
+### Answer
+Number 2
+
+## Moving and copying
+Consider the following commands and their outputs:
+- pwd
+  - /Users/jamie/data
+- ls
+  - proteins.dat
+- mkdir recombine
+- mv proteins.dat recombine/
+- cp recombine/proteins.dat ../proteins-saved.dat
+
+Which of these would be the result if we typed "ls"?
+1. proteins-saved.dat
+2. recombine
+3. proteins.dat recombine
+4. proteins-saved.dat
+
+### Answer
+Number 2.
+
+# Removing
+`rm science_paper.txt`. If we use `ls` we can see that the file is gone. Be careful, though. Removing is FOREVER! There is no trash bin to un-delete files from.
+
+We can use `rm` safely though. Let's create a file: `touch temp.txt`. If we do `rm -i temp.txt`, we are prompted before it gets deleted.
 
 ## Removing directories
 IF we try `rm thesis` we see that doesn't work. Instead, `rm -r thesis`. Super dangerous—use `rm -r -i thesis`.
@@ -68,3 +99,62 @@ Type `ls data-shell/molecules`. We have a lot of different files in here.
 The `*` means "zero or more characters of any kind". `ls *.pdb` matches any file that ends in `.pdb`. 
 
 The `?` is also a wildcard. It matches exactly one character. So `?ethane.pdb` matches only `methane.pdb`, but `*ethane.pdb` matches both `ethane.pdb` and `methane.pdb`.
+
+# Activities
+## List files matching a pattern
+When our working directory is "molecules", which commands will produce the following output: "ethane.pdb methane.pdb"?
+1. ls t\*ane.pdb
+1. ls \*t?ne.\*
+1. ls \*t??ne.pdb
+1. ls ethane.\*
+
+### Answer
+Number 3
+
+## Organizing directories and files
+Continuing with "molecules" as our working directory, what command(s) could we use to copy octane.pdb and pentane.pdb to the "data-shell" directory? Remember that "data-shell" is the parent directory of "data-shell".
+1. cp ???tane.pdb data-shell
+1. cp \*tane.pdb ../
+1. cp \*tane.pdb data-shell
+1. cp ???tane.pdb ~
+
+### Answer
+Number 2!
+
+## Reproducing a folder structure
+Suppose you are starting a new experiment and want to create a specfic directory structure, so that your output data is organized. You want an outer folder called "2019-10-14", a subfolder called "data", and within "data" two folders called "process" and "raw". In other words, you want your directory structure to look like this:
+
+```
+2019-10-14/
+└── data/
+    ├── processed/
+    └── raw/
+```
+    
+Assuming you want "2019-10-14" to be in your current working directory, how would you create this file structure? Tip: you'll definitely want to use the command that makes directories, and you might also make use of the command that changes your working directory.
+
+### Answer
+There are a lot of solutions. Here are two:
+
+```
+$ mkdir 2019-10-14
+$ mkdir 2019-10-14/data
+$ mkdir 2019-10-14/data/processed
+$ mkdir 2019-10-14/data/raw
+```
+
+(or)
+
+```
+$ mkdir 2019-10-14
+$ cd 2019-10-14
+$ mkdir data
+$ cd data
+$ mkdir raw
+$ mkdir processed
+```
+
+But there are plenty of ways to do this that are correct! 
+
+
+
