@@ -13,6 +13,31 @@ do
 done
 ```
 
+Let's take a look at what is happening
+```
+for filename in *.dat
+do
+    echo "The value of filename is " $filename
+done
+```
+
+We can see that the value of `filename` changes, and is equal to the items in the list.
+
+# Does the variable name matter?
+
+What do you think will happen when we type this? :
+
+```
+for abcdefg in *.dat
+do
+    echo "The value of abcdefg is " $abcdefg
+done
+```
+
+It runs the exact same. So, it doesn't matter what the variable name is. But it would be VERY beneficial to use a descriptive filename.
+
+# More complicated stuff
+
 So how can we do this for our example?
 ```
 $ for filename in basilisk.dat minotaur.dat unicorn.dat
@@ -27,7 +52,7 @@ Notice how the shell puts a `>` on the line. That reminds us that we haven't fin
 https://github.com/morganoneka/CarpentriesNotes/blob/master/UnixShell/05_Loops/Activities.md
 
 # Another loop example
-Slightly more complicated loop:
+We can put as much code as we want in our loop. Here's a more complicated loop:
 ```
 $ for filename in *.dat
 > do
@@ -36,7 +61,7 @@ $ for filename in *.dat
 > done
 ```
 
-The shell starts by expanding *.dat to create the list of files it will process. The loop body then executes two commands for each of those files. The first command, echo, prints its command-line arguments to standard output. The head command gets the first 100 lines of the file, then passes them to the tail command. The tail command takes the last 20 lines of that input; this then prints lines 81-100 from each file.
+The shell starts by expanding `*.dat` to create the list of files it will process. The loop body then executes two commands for each of those files. The first command, `echo`, prints its command-line arguments to standard output. The `head` command gets the first 100 lines of the file, then passes them to the tail command. The tail command takes the last 20 lines of that input; this then prints lines 81-100 from each file.
 
 ( show file: HowLoopsWork.png )
 
