@@ -58,7 +58,7 @@ echo data/amino-acids.txt > myfile.txt
   
   Number 2 uses `echo`. This will print out `data/amino-acids.txt` instead of the _contents_ of `data/amino-acids.txt`
   
-  Number 3 again uses `echo` where it shouldn't, but there is a second mistake. The `>>` on the second line will write over the contents we put in `myfile.txt` in the previous command.
+  Number 3 again uses `echo` where it shouldn't, but there is a second mistake. The `>` on the second line will write over the contents we put in `myfile.txt` in the previous command.
   
 </details>
 
