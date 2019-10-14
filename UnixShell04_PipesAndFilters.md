@@ -35,6 +35,62 @@ The function `echo` prints strings that we tell it to. Example: `echo hello worl
 
 Now, let's run `echo hello > testfile1.txt`. If we `cat testfile1.txt`, we have the word hello. `echo goodbye > testfile1.txt`. We see that goodbye replaced hello. However, running `echo hello >> testfile2.txt` then `echo goodbye >> testfile2.txt`. We have both words in the file.
 
+# Activities
+## Using the double carrots
+Navigate back to the data-shell directory. Suppose you wanted to create a file that lists all the .pdb files in the "molecules" folder **AND** the contents of the file "`data/amino-acids.txt`". In other words, the file looks like this:
+```
+molecules/cubane.pdb
+molecules/ethane.pdb
+molecules/methane.pdb
+molecules/octane.pdb
+molecules/pentane.pdb
+molecules/propane.pdb
+Alanine		Ala
+Arginine	Arg
+Asparagine	Asn
+Aspartic acid	Asp
+Cysteine	Cys
+Glutamic acid	Glu
+Glutamine	Gln
+Glycine		Gly
+Histidine	His
+Isoleucine	Ile
+Leucine		Leu
+Lysine		Lys
+Methionine	Met
+Phenylalanine	Phe
+Proline		Pro
+Serine		Ser
+Threonine	Thr
+Tryptophan	Trp
+Tyrosine	Tyr
+Valine		Val
+```
+
+How would you do this?
+
+1)
+```
+ls molecules/*.pdb >> myfile.txt
+cat data/amino-acids.txt >> myfile.txt
+```
+
+2)
+```
+ls molecules/*.pdb > ../myfile.txt
+echo data/amino-acids.txt > ../myfile.txt
+```
+
+3)
+```
+ls molecules/*.pdb > myfile.txt
+echo data/amino-acids.txt > my file.txt
+```
+
+### Answer
+Number 1!
+
+
 # Pipes
 Sometimes it can be a pain to write intermediate output to files. We can use something called pipes to help. What this does is it takes the output from one command, then feeds it in as output to the next one. 
 
