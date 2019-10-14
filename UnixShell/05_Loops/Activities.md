@@ -93,7 +93,7 @@ $ for filename in *c*
 <summary>Answer</summary>
 
 4 is the correct answer. * matches zero or more characters, so a file name with zero or more characters before a letter c and zero or more characters after the letter c will be matched.
-</details?
+</details>
 
 ## Saving to a file in a loop
 In the `data-shell/molecules` directory, what is the effect of this loop?
@@ -133,3 +133,53 @@ done
 <summary>Answer</summary>
 3 is the correct answer. >> appends to a file, rather than overwriting it with the redirected output from a command. Given the output from the cat command has been redirected, nothing is printed to the screen.
 </details>
+
+***
+
+# Activities 2
+## Helping Nelle with her pipeline
+Nelle is now ready to process her data files using goostats — a shell script written by her supervisor. This calculates some statistics from a protein sample file, and is run like this: `bash goostats [input] [output]`.
+
+Nelle wants to loop over the `.txt` files that end with A or B. For each file, she wants to print out the file name, then run goostats. She wants to use each file as the input to goostats, then specify the output as `stats-[filename]`. 
+
+Complete the base code below to help Nelle:
+
+```
+for datafile in [ ******* ]
+do 
+    echo $datafile
+    bash goostats $datafile stats-$datafile
+done
+```
+
+<details>
+    <summary>Answer</summary>
+    
+```
+for datafile in NENE*[AB].txt
+do 
+    echo $datafile
+    bash goostats $datafile stats-$datafile
+done
+```
+</details>
+
+## Nested loops 
+Suppose we want to set up up a directory structure to organize some experiments measuring reaction rate constants with different compounds and different temperatures. What would be the result of the following code?: 
+
+```
+$ for species in cubane ethane methane
+> do
+>     for temperature in 25 30 37 40
+>     do
+>         mkdir $species-$temperature
+>     done
+> done
+```
+
+<details>
+    <summary>Answer</summary
+        We have a nested loop, i.e. contained within another loop, so for each species in the outer loop, the inner loop (the nested loop) iterates over the list of temperatures, and creates a new directory for each combination.
+
+Try running the code for yourself to see which directories are created!
+    </details>
