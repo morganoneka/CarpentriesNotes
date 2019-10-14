@@ -21,8 +21,9 @@ $ for datafile in *.pdb
 > do
 >	ls $datafile
 > done
-Why do these two loops give different outputs?
 ```
+
+Why do these two loops give different outputs?
 
 <details>
 <summary>Answer</summary>
@@ -92,7 +93,7 @@ $ for filename in *c*
 <details>
 <summary>Answer</summary>
 
-4 is the correct answer. * matches zero or more characters, so a file name with zero or more characters before a letter c and zero or more characters after the letter c will be matched.
+4 is the correct answer. `*` matches zero or more characters, so a file name with zero or more characters before a letter `c` and zero or more characters after the letter `c` will be matched.
 </details>
 
 ## Saving to a file in a loop
@@ -138,9 +139,9 @@ done
 
 # Activities 2
 ## Helping Nelle with her pipeline
-Nelle is now ready to process her data files using goostats — a shell script written by her supervisor. This calculates some statistics from a protein sample file, and is run like this: `bash goostats [input] [output]`.
+Nelle wants to process her data files using goostats — a shell script written by her supervisor. This calculates some statistics from a protein sample file, and is run like this: `bash goostats [input] [output]`.
 
-Nelle wants to loop over the `.txt` files that end with A or B. For each file, she wants to print out the file name, then run goostats. She wants to use each file as the input to goostats, then specify the output as `stats-[filename]`. 
+Nelle wants to loop over the `.txt` files that end with A or B. For each file, she wants to print out the file name, then run goostats. She wants to use each file as the input to goostats, then specify the output as `stats-[original filename]`. 
 
 Complete the base code below to help Nelle:
 
@@ -179,7 +180,7 @@ $ for species in cubane ethane methane
 
 <details>
     <summary>Answer</summary
-        We have a nested loop, i.e. contained within another loop, so for each species in the outer loop, the inner loop (the nested loop) iterates over the list of temperatures, and creates a new directory for each combination.
+        This is a nested loop, i.e. contained within another loop, so for each species in the outer loop, the inner loop (the nested loop) iterates over the list of temperatures, and creates a new directory for each combination.
 
 Try running the code for yourself to see which directories are created!
     </details>
