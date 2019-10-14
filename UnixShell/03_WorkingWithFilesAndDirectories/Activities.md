@@ -70,3 +70,41 @@ Continuing with "molecules" as our working directory, what command(s) could we u
   <summary>Answer</summary>
   Number 2 is correct. Number 1 and 3 will result in an error, because there is no `data-shell` directory in `molecules`. Number 1 and 4 are incorrect because `???tane.pdb` will only match `pentane.pdb` and not `octane.pdb`. Also, number 4 copies the files to the user's home directory, not the `data-shell` directory.
 </details>
+
+## Reproducing a folder structure
+Suppose you are starting a new experiment and want to create a specfic directory structure, so that your output data is organized. You want an outer folder called "2019-10-14", a subfolder called "data", and within "data" two folders called "process" and "raw". In other words, you want your directory structure to look like this:
+
+```
+2019-10-14/
+└── data/
+    ├── processed/
+    └── raw/
+```
+    
+Assuming you want "2019-10-14" to be in your current working directory, how would you create this file structure? Tip: you'll definitely want to use the command that makes directories, and you might also make use of the command that changes your working directory.
+
+
+<details>
+  <summary>Answer</summary>
+There are a lot of solutions. Here are two:
+
+```
+$ mkdir 2019-10-14
+$ mkdir 2019-10-14/data
+$ mkdir 2019-10-14/data/processed
+$ mkdir 2019-10-14/data/raw
+```
+
+(or)
+
+```
+$ mkdir 2019-10-14
+$ cd 2019-10-14
+$ mkdir data
+$ cd data
+$ mkdir raw
+$ mkdir processed
+```
+
+But there are plenty of ways to do this that are correct! 
+</details>
