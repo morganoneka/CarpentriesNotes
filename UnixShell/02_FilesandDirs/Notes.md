@@ -29,7 +29,7 @@ So the command we typed above displayed all the folders and files in our root di
 `/` is called an **argument**. In our command above, this was used to determine what directory we wanted to look at the contents of. Because we used `/` as our argument, this looked at our root directory. 
 
 ## Terminology and error messages
-The difference between options and arguments? Options are determined by the computer (or the person who wrote the script, but we'll get into that later) and can only take on certain values. If we type `ls -x`, we get an error.
+The difference between options and arguments? Options are determined by the computer (or the person who wrote the script, but we'll get into that later) and can only take on certain values. If we type `ls -2`, we get an error.
 
 But arguments can be tailored to whatever you are working on. Let's say we want to look at our home directory instead. We could type `ls -F /Users/morgan`. 
 
