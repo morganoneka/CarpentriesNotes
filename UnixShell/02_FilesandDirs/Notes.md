@@ -40,7 +40,7 @@ However, we can also have too many spaces. `ls - F` also does not work.
 
 The command line isn't Google—it can't correct our mistakes. Typing `ks` will not work, because `ks` isn't a command that the command line knows how to execute.
 
-And finally, case (whether things are upper or lower case) matters. `LS -F /` will not run. `ls -f /` will give us a different result.
+And finally, case (whether things are upper or lower case) matters... sometimes. `LS -F /` may or may not run, so the command itself may not be case sensitive, depending on your operating system. `ls -f /` will give us a different result, so flags are usually case sensitive.
 
 Fortunately, when we make these mistakes, we will get an error message to help us out! Making mistakes that seem simple or stupid are incredibly common. 
 
