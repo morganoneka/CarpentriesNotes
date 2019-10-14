@@ -8,7 +8,7 @@ Let's return to the `data-shell` directory. Say we want to create a directory ca
 The command we run to create the new folder is: `mkdir thesis`. It stands for "make directory" and makes a directory within our current working directory. Let's use `ls -F` to make sure it worked.
 
 ## Tips for creating directories
-Spaces can be problematic. If you want to 
+Spaces can be problematic.  For example: `mkdir morgans things` creates two directories! We could instead run `mkdir "morgans things"`... but that can make things difficult down the line. So, instead, it's best to avoid using spaces in file or folder names.
 
 # Creating files
 Let's take a look inside the directory: `ls -F thesis`. There isn't anything in there yet.
