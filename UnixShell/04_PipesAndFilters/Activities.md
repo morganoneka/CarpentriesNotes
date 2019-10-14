@@ -1,7 +1,7 @@
 # Activities: Part 1
 
 ## Using the double carrots
-Navigate back to the data-shell directory. Suppose you wanted to create a file that lists all the .pdb files in the "molecules" folder **AND** the contents of the file "`data/amino-acids.txt`". In other words, the file looks like this:
+Navigate back to the `data-shell` directory. Suppose you wanted to create a file that lists all the `.pdb` files in the `molecules` folder **AND** the contents of the file "`data/amino-acids.txt`". In other words, the file looks like this:
 ```
 molecules/cubane.pdb
 molecules/ethane.pdb
