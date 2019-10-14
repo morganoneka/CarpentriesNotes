@@ -1,7 +1,7 @@
 # Activities 1
 
 ## Variables in Loops
-This exercise refers to the data-shell/molecules directory. ls gives the following output:
+This exercise refers to the `data-shell/molecules` directory. `ls` gives the following output:
 
 `cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb`
 
