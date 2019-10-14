@@ -1,4 +1,4 @@
-Moving forward, we're gong to learn more about what makes shell so pwoerful: the ability to combine existing programs in new ways.
+Moving forward, we're gong to learn more about what makes shell so powerful: the ability to combine existing programs in new ways.
 
 # More with wildcards
 Let's return to the `molecules` database, which we already took a look at. If we `cd molecules` then `ls -F`, we see that we have lots of files that end in `.pdb`, which are Protein Data Bank format files, looking at type and position of each atom in a molecule.
