@@ -5,6 +5,7 @@ What happens when you run the following commands?:
 - `ls -h`
 - `ls -l -h`
 - `ls -lh`
+
 What do you notice about the output for `ls -l -h` and `ls -lh`?
 
 <details>
@@ -34,6 +35,7 @@ Using `man ls` or `ls --help` (whichever works on your machine). Find the flags 
 <summary>Answer</summary>
 `ls -R` recursively lists subdirectories. `ls -U -t` uses the time of file creation for sorting. `ls -f` prints output that isn't sorted in any obvious way.
 </details>
+
 ***
 
 # Activities 2
