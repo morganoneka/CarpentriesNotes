@@ -1,4 +1,4 @@
-# How to learn more
+# Where to learn more
 
 [The Carpentries website](https://software-carpentry.org/lessons/) has a bit more in terms of intro material. But where else can you go to learn more?
 
